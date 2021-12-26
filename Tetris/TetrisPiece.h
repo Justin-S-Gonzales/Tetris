@@ -11,7 +11,7 @@ class TetrisPiece : public Object
 {
 private:
 	unsigned int m_CurrentRotation;
-	std::vector<std::vector<Object>> m_Rotations;
+	std::vector<std::list<Object>> m_Rotations;
 	unsigned int m_GridSize;
 	unsigned int m_NumberOfRotations;
 	bool m_IsFalling;
@@ -32,7 +32,7 @@ public:
 	void Update(bool* keys, GLfloat& deltaTime, GLfloat& moveSpeed, GLfloat& fallSpeed, GLfloat& rotationSpeed,
 		std::shared_ptr<Object> grid, std::list <Object*> fallenTiles, GLfloat initFallSpeed);
 
-	std::vector<Object> GetTiles() { return m_Rotations[m_CurrentRotation]; }
+	std::list<Object> GetTiles() { return m_Rotations[m_CurrentRotation]; }
 
 	bool IsFalling() { return m_IsFalling; }
 

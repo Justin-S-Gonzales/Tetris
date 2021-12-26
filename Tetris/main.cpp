@@ -201,7 +201,7 @@ int main()
 			fallSpeed -= 0.01f;
 			initFallSpeed -= 0.01f;
 			rotationSpeed -= 0.001f;
-			moveSpeed -= 0.02f;
+			moveSpeed -= 0.008f;
 			if (initFallSpeed < 0.05f)
 			{
 				fallSpeed = 0.05f;

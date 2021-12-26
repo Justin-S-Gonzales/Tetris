@@ -18,7 +18,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 
 	if (tetromino == Tetromino::I)
 	{
-		std::vector<Object> iRotation0 =
+		std::list<Object> iRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -26,7 +26,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (right * 3.0f), m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 		};
 
-		std::vector<Object> iRotation1 =
+		std::list<Object> iRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -41,7 +41,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	}
 	else if (tetromino == Tetromino::O)
 	{
-		std::vector<Object> oRotation0 =
+		std::list<Object> oRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -55,7 +55,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	}
 	else if (tetromino == Tetromino::T)
 	{
-		std::vector<Object> tRotation0 =
+		std::list<Object> tRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + left, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -63,7 +63,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + up, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> tRotation1 =
+		std::list<Object> tRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + up, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -71,7 +71,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> tRotation2 =
+		std::list<Object> tRotation2 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + left, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -79,7 +79,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 		
-		std::vector<Object> tRotation3 =
+		std::list<Object> tRotation3 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + up, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -95,7 +95,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	}
 	else if (tetromino == Tetromino::J)
 	{
-		std::vector<Object> jRotation0 =
+		std::list<Object> jRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -103,7 +103,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (down * 2.0f) + left, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> jRotation1 =
+		std::list<Object> jRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -111,7 +111,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (right * 2.0f) + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> jRotation2 =
+		std::list<Object> jRotation2 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + up, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -119,7 +119,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (up * 2.0f) + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> jRotation3 =
+		std::list<Object> jRotation3 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + left, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -136,7 +136,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	}
 	else if (tetromino == Tetromino::L)
 	{
-		std::vector<Object> lRotation0 =
+		std::list<Object> lRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -144,7 +144,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (down * 2.0f) + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> lRotation1 =
+		std::list<Object> lRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -152,7 +152,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (right * 2.0f) + up, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> lRotation2 =
+		std::list<Object> lRotation2 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + up , m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -160,7 +160,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + (up * 2.0f) + left, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> lRotation3 =
+		std::list<Object> lRotation3 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + left , m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -176,7 +176,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	}
 	else if (tetromino == Tetromino::S)
 	{
-		std::vector<Object> sRotation0 =
+		std::list<Object> sRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -184,7 +184,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + right + up + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> sRotation1 =
+		std::list<Object> sRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -200,7 +200,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 
 	else if (tetromino == Tetromino::Z)
 	{
-		std::vector<Object> zRotation0 =
+		std::list<Object> zRotation0 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -208,7 +208,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 			Object(m_Mesh, m_Position + right + down + right, m_Scale, m_ModelLocation, m_ShaderID, m_Color)
 		};
 
-		std::vector<Object> zRotation1 =
+		std::list<Object> zRotation1 =
 		{
 			Object(m_Mesh, m_Position, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
 			Object(m_Mesh, m_Position + down, m_Scale, m_ModelLocation, m_ShaderID, m_Color),
@@ -243,30 +243,48 @@ void TetrisPiece::Update(bool* keys, GLfloat& deltaTime, GLfloat& moveSpeed, GLf
 	// Check that rotation works
 	if (m_TimeAcc3 > rotationSpeed && m_IsFalling)
 	{
-		m_TimeAcc3 = 0.0f;
-
 		if (keys[GLFW_KEY_SPACE])
 		{
-			m_CurrentRotation = ++m_CurrentRotation % m_NumberOfRotations;
+			m_TimeAcc3 = 0.0f;
+			unsigned int newRotation = ++m_CurrentRotation % m_NumberOfRotations;
+
+			bool rotationWorks = true;
+			for (std::list<Object>::iterator it = m_Rotations[newRotation].begin();
+				it != m_Rotations[newRotation].end(); it++)
+			{
+				for (auto& j : fallenTiles)
+				{
+					if (it->GetPosition() == j->GetPosition())
+						rotationWorks = false;
+					if (it->GetPosition().y < grid->GetPosition().y - (grid->GetScale().y / 2))
+						rotationWorks = false;
+				}
+			}
+
+			if (rotationWorks)
+				m_CurrentRotation = newRotation;
+			else
+				m_CurrentRotation = --m_CurrentRotation % m_NumberOfRotations;
 		}
 	}
 
 	glm::vec2 directionVector = glm::vec2(0.0f, 0.0f);
 	if (m_TimeAcc1 > moveSpeed && m_IsFalling)
 	{
-		m_TimeAcc1 = 0.0f;
-
 		if (keys[GLFW_KEY_A])
 		{
+			m_TimeAcc1 = 0.0f;
 			directionVector.x = -(float)m_GridSize;
 		}
 
 		if (keys[GLFW_KEY_D])
 		{
+			m_TimeAcc1 = 0.0f;
 			directionVector.x = m_GridSize;
 		}
 		if (keys[GLFW_KEY_S])
 		{
+			m_TimeAcc1 = 0.0f;
 			fallSpeed = initFallSpeed / 3;
 		}
 		else if (!keys[GLFW_KEY_S])
@@ -280,21 +298,22 @@ void TetrisPiece::Update(bool* keys, GLfloat& deltaTime, GLfloat& moveSpeed, GLf
 	}
 
 	bool hasMoved = false;
-	for (int i = 0; i < 4; i++)
+	for (std::list<Object>::iterator it = m_Rotations[m_CurrentRotation].begin(); it != m_Rotations[m_CurrentRotation].end();
+		it++)
 	{
-		if (m_Rotations[m_CurrentRotation][i].GetPosition().x + directionVector.x >
+		if (it->GetPosition().x + directionVector.x >
 			grid->GetPosition().x + (grid->GetScale().x / 2.0f) && !hasMoved)
 		{
 			directionVector.x -= 1.0f * m_GridSize;
 			hasMoved = true;
 		}
-		if (m_Rotations[m_CurrentRotation][i].GetPosition().x + directionVector.x <
+		if (it->GetPosition().x + directionVector.x <
 			grid->GetPosition().x - (grid->GetScale().x / 2.0f) && !hasMoved)
 		{
 			directionVector.x += 1.0f * m_GridSize;
 			hasMoved = true;
 		}
-		if (m_Rotations[m_CurrentRotation][i].GetPosition().y + directionVector.y <
+		if (it->GetPosition().y + directionVector.y <
 			grid->GetPosition().y - (grid->GetScale().y / 2.0f) && !hasMoved)
 		{
 			directionVector.y = 0.0f;
