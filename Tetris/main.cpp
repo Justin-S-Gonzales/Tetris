@@ -69,14 +69,14 @@ int main()
 
 	Window window;
 
-	int gridSize = 15;
-	int gridWidth = 10;
-	int gridHeight = 20;
+	int gridSize = 22;
+	int gridWidth = 5;
+	int gridHeight = 10;
 
-	float width = (gridWidth + 25) * gridSize;
-	float height = (gridHeight + 25) * gridSize;
+	float width = (gridWidth + 18) * gridSize;
+	float height = (gridHeight + 21) * gridSize;
 
-	glm::vec2 gridPos = glm::vec2(-4 * (float)gridSize, gridSize);
+	glm::vec2 gridPos = glm::vec2(-4 * (float)gridSize, 0.0f);
 	glm::vec2 gridStart = gridPos + glm::vec2(-(float)((gridWidth / 2) * gridSize), (gridHeight * gridSize) - gridSize) 
 		- glm::vec2(-gridSize / 2, -gridSize / 2);
 	
@@ -127,9 +127,9 @@ int main()
 
 	std::list <Object*> fallenTiles;
 
-	GLfloat moveSpeed = 0.3f;
-	GLfloat fallSpeed = 0.4f;
-	GLfloat rotationSpeed = 0.15f;
+	GLfloat moveSpeed = 0.4f;
+	GLfloat fallSpeed = 0.5f;
+	GLfloat rotationSpeed = 0.25f;
 	GLfloat initFallSpeed = fallSpeed;
 
 	std::shared_ptr<Object> grid(new Object(rect, gridPos, 
@@ -198,19 +198,19 @@ int main()
 			pieces.push_back(TetrisPiece(rect, gridStart, glm::vec2(gridSize, gridSize), uModel, shader.GetShaderID(),
 				currentColor, tetromino, gridSize));
 
-			fallSpeed -= 0.01f;
-			initFallSpeed -= 0.01f;
-			rotationSpeed -= 0.001f;
-			moveSpeed -= 0.008f;
-			if (initFallSpeed < 0.05f)
+			fallSpeed -= 0.004f;
+			initFallSpeed -= 0.004f;
+			rotationSpeed -= 0.00005f;
+			moveSpeed -= 0.00055f;
+			if (initFallSpeed < 0.1f)
 			{
-				fallSpeed = 0.05f;
-				initFallSpeed = 0.05f;
+				fallSpeed = 0.01;
+				initFallSpeed = 0.01f;
 			}
 			if (rotationSpeed < 0.05f)
 				rotationSpeed = 0.05f;
-			if (moveSpeed < 0.04f)
-				moveSpeed = 0.04f;
+			if (moveSpeed < 0.06f)
+				moveSpeed = 0.06f;
 		}
 
 		for (int height = gridStart.y; height > gridStart.y - (gridHeight * 2 * gridSize); height -= gridSize)

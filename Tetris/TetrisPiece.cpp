@@ -9,7 +9,7 @@ TetrisPiece::TetrisPiece(std::shared_ptr<Mesh> mesh, glm::vec2 position, glm::ve
 	m_GridSize = gridSize;
 
 	m_GridStart = position;
-	m_Position = position += glm::vec2(20 * m_GridSize, 0.0f);
+	m_Position = position += glm::vec2(11* m_GridSize, 0.0f);
 
 	glm::vec2 right = glm::vec2(1.0f, 0.0f) * (float)m_GridSize;
 	glm::vec2 left = glm::vec2(-1.0f, 0.0f) * (float)m_GridSize;
@@ -229,7 +229,7 @@ void TetrisPiece::Start()
 	m_Position = m_GridStart;
 	for (auto& i : m_Rotations)
 		for (auto& j : i)
-			j.SetPosition(j.GetPosition() - glm::vec2(15.0f * (float) m_GridSize, 0.0f));
+			j.SetPosition(j.GetPosition() - glm::vec2(9.0f * (float) m_GridSize, 0.0f));
 }
 
 void TetrisPiece::Update(bool* keys, GLfloat& deltaTime, GLfloat& moveSpeed, GLfloat& fallSpeed, GLfloat& rotationSpeed,
